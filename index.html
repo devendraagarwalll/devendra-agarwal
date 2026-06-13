@@ -15,43 +15,27 @@
   --border: #E8E8E8;
   --bg:     #FFFFFF;
   --surface:#F7F7F7;
-  --light-orange: #FFF6F3;
-  --soft-blue: #E8F4F8;
-  --soft-green: #E8F5E9;
-  --soft-purple: #F3E8FF;
 }
 html { scroll-behavior: smooth; }
 body { font-family: 'Inter', sans-serif; background: linear-gradient(135deg, #FFFFFF 0%, #F9F4F1 100%); color: var(--dark); line-height: 1.6; font-size: 16px; }
 
-/* NAV - RIGHT ALIGNED */
-nav { position: sticky; top: 0; background: rgba(255,255,255,0.98); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); padding: 14px 60px; display: flex; justify-content: space-between; }
-.nav-branding { display: flex; gap: 8px; align-items: baseline; }
+/* NAV - MINIMAL */
+nav { position: sticky; top: 0; background: rgba(255,255,255,0.98); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); padding: 14px 60px; display: flex; justify-content: space-between; align-items: center; }
 .nav-menu { display: flex; gap: 28px; align-items: center; }
 .nav-link { font-size: 13px; color: var(--mid); text-decoration: none; font-weight: 500; transition: color 0.2s; }
 .nav-link:hover, .nav-link.active { color: var(--accent); }
-.nav-name { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 15px; color: var(--dark); }
-.nav-role { font-size: 10px; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; margin-top: 2px; }
 .nav-email { font-size: 13px; color: var(--accent); text-decoration: none; font-weight: 600; border: 1px solid var(--accent); padding: 7px 14px; border-radius: 6px; transition: all 0.2s; }
 .nav-email:hover { background: var(--accent); color: white; }
 
-.hero { padding: 90px 60px 60px; max-width: 1100px; margin: 0 auto; }
-.hero-header { display: flex; flex-direction: column; gap: 16px; margin-bottom: 48px; }
-.hero-name { font-family: 'Space Grotesk', sans-serif; font-size: clamp(48px, 6vw, 72px); font-weight: 800; letter-spacing: -2px; line-height: 1.05; color: var(--dark); }
-.hero-name span { color: var(--accent); }
-.hero-subtitle { font-family: 'Space Grotesk', sans-serif; font-size: clamp(24px, 3vw, 32px); font-weight: 700; color: var(--mid); letter-spacing: -0.5px; }
-.hero-tag { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); font-weight: 600; margin-bottom: 12px; display: none; }
-.hero-tagline { font-size: 17px; color: var(--mid); max-width: 500px; line-height: 1.8; margin-bottom: 36px; }
-.hero-cta { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 64px; }
+.hero { padding: 120px 60px 80px; max-width: 1100px; margin: 0 auto; }
+.hero-name { font-family: 'Space Grotesk', sans-serif; font-size: clamp(56px, 8vw, 84px); font-weight: 800; letter-spacing: -2px; line-height: 1.05; color: var(--dark); margin-bottom: 24px; }
+.hero-subtitle { font-family: 'Space Grotesk', sans-serif; font-size: clamp(18px, 2.5vw, 24px); font-weight: 700; color: var(--mid); letter-spacing: -0.5px; margin-bottom: 16px; }
+.hero-tagline { font-size: 17px; color: var(--mid); max-width: 600px; line-height: 1.8; margin-bottom: 36px; }
+.hero-cta { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 80px; }
 .cta-primary { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; padding: 12px 24px; border-radius: 6px; text-decoration: none; background: var(--accent); color: white; transition: all 0.2s; }
 .cta-primary:hover { opacity: 0.88; transform: translateY(-2px); }
 .cta-secondary { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; padding: 12px 24px; border-radius: 6px; text-decoration: none; border: 1px solid var(--border); color: var(--dark); transition: all 0.2s; }
 .cta-secondary:hover { border-color: var(--dark); background: var(--surface); }
-
-.hero-meta { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
-.meta-item { padding: 22px 24px; background: var(--bg); }
-.meta-label { font-size: 11px; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; font-weight: 600; }
-.meta-value { font-family: 'Space Grotesk', sans-serif; font-size: 30px; font-weight: 800; color: var(--dark); letter-spacing: -1px; }
-.meta-value .accent { color: var(--accent); }
 
 .stats-banner { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 48px 60px; background: linear-gradient(135deg, #F9F4F1 0%, #F7F7F7 100%); }
 .stats-container { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
@@ -66,9 +50,24 @@ nav { position: sticky; top: 0; background: rgba(255,255,255,0.98); backdrop-fil
 .section-title { font-family: 'Space Grotesk', sans-serif; font-size: clamp(28px, 3.5vw, 40px); font-weight: 800; letter-spacing: -1px; color: var(--dark); }
 .section-divider { border: none; border-top: 1px solid var(--border); margin: 0; }
 
-/* DESI KAANOON + YOUTUBE VIDEO SECTION */
-.project-showcase { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 64px; align-items: start; }
+/* MY STORY SECTION */
+.story-container { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+.story-text h3 { font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 700; margin-bottom: 16px; color: var(--dark); }
+.story-text p { font-size: 15px; color: var(--mid); line-height: 1.8; margin-bottom: 20px; }
+.story-text strong { color: var(--dark); font-weight: 700; }
+.story-highlights { display: flex; flex-direction: column; gap: 20px; }
+.highlight-card { background: var(--surface); padding: 20px; border-radius: 8px; border-left: 3px solid var(--accent); }
+.highlight-card h4 { font-family: 'Space Grotesk', sans-serif; font-size: 14px; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
+.highlight-card p { font-size: 13px; color: var(--mid); }
 
+/* TOOLS SECTION */
+.tools-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+.tool-category h4 { font-family: 'Space Grotesk', sans-serif; font-size: 16px; font-weight: 700; color: var(--dark); margin-bottom: 16px; }
+.tool-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.tag { background: var(--surface); color: var(--dark); padding: 8px 14px; border-radius: 20px; font-size: 12px; font-weight: 600; border: 1px solid var(--border); }
+
+/* WORK SECTION */
+.project-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
 .dk-showcase { display: flex; flex-direction: column; gap: 0; }
 .dk-image-container { width: 100%; aspect-ratio: 16/9; overflow: hidden; background: var(--surface); border-radius: 12px 12px 0 0; border: 1px solid var(--border); border-bottom: none; }
 .dk-image-container img { width: 100%; height: 100%; object-fit: cover; }
@@ -76,13 +75,8 @@ nav { position: sticky; top: 0; background: rgba(255,255,255,0.98); backdrop-fil
 .dk-info h3 { font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 700; color: var(--dark); margin-bottom: 12px; }
 .dk-info p { font-size: 13px; color: var(--mid); line-height: 1.6; margin-bottom: 16px; }
 .dk-metrics { display: flex; flex-direction: column; gap: 8px; font-size: 12px; color: var(--muted); }
-.dk-metrics span { font-weight: 600; }
 .dk-link { font-size: 13px; color: var(--accent); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; margin-top: 16px; }
 .dk-link:hover { text-decoration: underline; }
-
-.yt-right { display: flex; flex-direction: column; gap: 24px; }
-.yt-embed { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; background: black; display: flex; align-items: center; justify-content: center; aspect-ratio: 16/9; }
-.yt-embed iframe { border: none; width: 100%; height: 100%; }
 
 .reel-container { background: linear-gradient(135deg, #E8F4F8 0%, #F0F8FB 100%); border-radius: 12px; padding: 24px; border: 1px solid #D1E8F0; }
 .reel-title { font-family: 'Space Grotesk', sans-serif; font-size: 16px; font-weight: 700; color: var(--dark); margin-bottom: 16px; }
@@ -100,13 +94,12 @@ nav { position: sticky; top: 0; background: rgba(255,255,255,0.98); backdrop-fil
 .metric-item { background: white; padding: 12px 14px; border-radius: 6px; }
 .metric-label { font-size: 11px; color: var(--muted); text-transform: uppercase; font-weight: 600; margin-bottom: 4px; letter-spacing: 0.5px; }
 .metric-value { font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 800; color: var(--accent); }
-.yt-script { font-size: 12px; color: var(--mid); line-height: 1.6; font-style: italic; padding: 12px; background: white; border-left: 3px solid var(--accent); border-radius: 0 4px 4px 0; }
 
-/* YOUTUBE PROJECT SECTION */
+/* YOUTUBE THUMBNAILS */
 .yt-project { margin-top: 64px; padding-top: 64px; border-top: 1px solid var(--border); }
 .yt-project-title { font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 700; color: var(--dark); margin-bottom: 12px; }
 .yt-project-desc { font-size: 14px; color: var(--mid); line-height: 1.7; margin-bottom: 28px; max-width: 600px; }
-.thumbnail-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.thumbnail-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .thumb-card { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; background: white; cursor: pointer; transition: all 0.2s; }
 .thumb-card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(217, 56, 0, 0.1); }
 .thumb-image { width: 100%; aspect-ratio: 16/9; overflow: hidden; background: var(--surface); }
@@ -114,17 +107,25 @@ nav { position: sticky; top: 0; background: rgba(255,255,255,0.98); backdrop-fil
 .thumb-card:hover .thumb-image img { transform: scale(1.05); }
 .thumb-title { padding: 12px; font-size: 12px; font-weight: 600; color: var(--dark); text-align: center; }
 
-/* ACHIEVEMENTS - MINIMALIST */
+/* ACHIEVEMENTS */
 .achievements-section { margin-top: 72px; padding-top: 72px; border-top: 1px solid var(--border); }
-.achieve-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
-.achieve-card { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; background: white; transition: all 0.2s; cursor: pointer; text-decoration: none; display: flex; flex-direction: column; }
-.achieve-card:hover { border-color: var(--accent); background: #FFF6F3; transform: translateY(-4px); }
-.achieve-image { width: 100%; aspect-ratio: 4/3; overflow: hidden; background: var(--surface); }
-.achieve-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
-.achieve-card:hover .achieve-image img { transform: scale(1.08); }
-.achieve-content { padding: 12px; text-align: center; flex: 1; display: flex; flex-direction: column; justify-content: center; }
+.achieve-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.achieve-card { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; background: white; cursor: pointer; text-decoration: none; display: flex; flex-direction: column; position: relative; }
+.achieve-card:hover { transform: translateY(-4px); }
+.achieve-image { width: 100%; aspect-ratio: 4/3; overflow: hidden; background: var(--surface); filter: blur(4px); }
+.achieve-image img { width: 100%; height: 100%; object-fit: cover; filter: blur(4px); }
+.achieve-overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3); }
+.achieve-content { padding: 12px; text-align: center; }
 .achieve-badge { font-size: 9px; letter-spacing: 1px; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 4px; }
-.achieve-name { font-family: 'Space Grotesk', sans-serif; font-size: 12px; font-weight: 700; color: var(--dark); }
+.achieve-name { font-family: 'Space Grotesk', sans-serif; font-size: 13px; font-weight: 700; color: var(--dark); }
+.achieve-label { font-size: 11px; color: var(--muted); margin-top: 6px; }
+
+/* EXPERTISE SECTION */
+.expertise-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.expertise-card { background: var(--surface); padding: 32px; border-radius: 10px; border: 1px solid var(--border); text-align: center; }
+.expertise-icon { font-size: 32px; margin-bottom: 16px; }
+.expertise-card h4 { font-family: 'Space Grotesk', sans-serif; font-size: 16px; font-weight: 700; color: var(--dark); margin-bottom: 12px; }
+.expertise-card p { font-size: 13px; color: var(--mid); line-height: 1.6; }
 
 .contact-section { border-top: 1px solid var(--border); padding: 72px 60px; max-width: 1100px; margin: 0 auto; }
 .contact-heading { font-family: 'Space Grotesk', sans-serif; font-size: clamp(28px, 3.5vw, 42px); font-weight: 800; letter-spacing: -1px; line-height: 1.3; color: var(--dark); margin-bottom: 32px; }
@@ -137,24 +138,26 @@ footer { text-align: center; padding: 32px 60px; font-size: 12px; color: var(--m
 
 @media (max-width: 768px) {
   nav, .hero, .section, .contact-section { padding-left: 20px; padding-right: 20px; }
-  nav { padding: 12px 20px; flex-wrap: wrap; gap: 12px; }
-  .nav-menu { gap: 16px; flex-wrap: wrap; }
-  .hero-meta, .stats-container { grid-template-columns: 1fr 1fr; }
-  .project-showcase { grid-template-columns: 1fr; }
+  nav { padding: 12px 20px; }
+  .nav-menu { gap: 16px; }
+  .stats-container { grid-template-columns: repeat(2, 1fr); }
+  .story-container { grid-template-columns: 1fr; gap: 40px; }
+  .project-grid { grid-template-columns: 1fr; }
   .reel-grid { grid-template-columns: 1fr; }
+  .tools-grid { grid-template-columns: 1fr; }
   .thumbnail-grid { grid-template-columns: repeat(2, 1fr); }
   .achieve-grid { grid-template-columns: repeat(2, 1fr); }
+  .expertise-grid { grid-template-columns: 1fr; }
   .contact-links { grid-template-columns: 1fr; }
-  .yt-right { gap: 16px; }
 }
 
 @media (max-width: 480px) {
   nav { padding: 10px 12px; }
   .hero { padding: 60px 12px 40px; }
-  .stats-container, .hero-meta { grid-template-columns: 1fr; }
+  .stats-container { grid-template-columns: 1fr; }
   .thumbnail-grid { grid-template-columns: 1fr; }
   .achieve-grid { grid-template-columns: 1fr; }
-  .reel-grid { grid-template-columns: 1fr; }
+  .expertise-grid { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -164,15 +167,9 @@ footer { text-align: center; padding: 32px 60px; font-size: 12px; color: var(--m
 <nav>
   <div class="nav-menu">
     <a href="#work" class="nav-link">Work</a>
-    <a href="#yt-project" class="nav-link">YouTube</a>
+    <a href="#expertise" class="nav-link">Expertise</a>
     <a href="#achievements" class="nav-link">Achievements</a>
     <a href="#contact" class="nav-link">About</a>
-  </div>
-  <div class="nav-branding">
-    <div>
-      <div class="nav-name">Devendra Agarwal</div>
-      <div class="nav-role">Content Strategist & Copywriter</div>
-    </div>
   </div>
   <div>
     <a href="mailto:devendra.agarwal2002@gmail.com" class="nav-email">Email</a>
@@ -181,31 +178,14 @@ footer { text-align: center; padding: 32px 60px; font-size: 12px; color: var(--m
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-header">
-    <div>
-      <h1 class="hero-name">Copywriter & <span>Content Strategist</span></h1>
-    </div>
-  </div>
+  <h1 class="hero-name">Devendra Agarwal</h1>
+  <h2 class="hero-subtitle">Copywriter & Content Strategist</h2>
   <p class="hero-tagline">
     Audience-first copy that drives real engagement. 500+ pieces, 200% growth, and measurable results across legal, social, and video content.
   </p>
   <div class="hero-cta">
     <a href="mailto:devendra.agarwal2002@gmail.com" class="cta-primary">Get in Touch</a>
     <a href="#work" class="cta-secondary">View Work →</a>
-  </div>
-  <div class="hero-meta">
-    <div class="meta-item">
-      <div class="meta-label">Pieces Created</div>
-      <div class="meta-value">500<span class="accent">+</span></div>
-    </div>
-    <div class="meta-item">
-      <div class="meta-label">Engagement Growth</div>
-      <div class="meta-value">200<span class="accent">%</span></div>
-    </div>
-    <div class="meta-item">
-      <div class="meta-label">Content Views</div>
-      <div class="meta-value">5.6<span class="accent">L+</span></div>
-    </div>
   </div>
 </section>
 
@@ -233,6 +213,129 @@ footer { text-align: center; padding: 32px 60px; font-size: 12px; color: var(--m
 
 <hr class="section-divider">
 
+<!-- MY STORY SECTION -->
+<section class="section">
+  <div class="section-header">
+    <div class="section-label">About</div>
+    <h2 class="section-title">My Story</h2>
+  </div>
+
+  <div class="story-container">
+    <div class="story-text">
+      <h3>I'm an <strong>MBA candidate in Marketing & Analytics at IIIT Lucknow</strong>, with a passion for turning complex ideas into compelling copy.</h3>
+      <p>Since 2021, I've written <strong>500+ pieces of content</strong> — from legal articles to social captions, video scripts, and brand messaging. I work with the understanding that <strong>audience first, narrative second</strong> drives engagement and measurable impact.</p>
+      <p>As sole content manager at <strong>Desi Kaanoon (100K followers ✓)</strong>, I drove <strong>200% engagement growth</strong> and 3x organic reach while making Supreme Court rulings accessible to everyday people. On <strong>YouTube</strong>, I built a channel to <strong>560,633 views</strong> through content strategy, scripting, and thumbnail design alone.</p>
+    </div>
+
+    <div class="story-highlights">
+      <div class="highlight-card">
+        <h4>🎯 Audience-First Mindset</h4>
+        <p>I think about who will read/watch first, brand narrative second. This drives engagement and shareability.</p>
+      </div>
+      <div class="highlight-card">
+        <h4>📊 Data-Driven Optimization</h4>
+        <p>I track metrics, A/B test copy, and iterate based on performance. Growth is measurable.</p>
+      </div>
+      <div class="highlight-card">
+        <h4>⚡ Deadline Discipline</h4>
+        <p>Fast turnaround without sacrificing quality. 13 months of daily publishing — zero misses.</p>
+      </div>
+      <div class="highlight-card">
+        <h4>🤝 Cross-Functional Collaboration</h4>
+        <p>Worked with Supreme Court lawyers, marketers, and founders. I adapt to any team.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- EXPERTISE SECTION -->
+<section class="section" id="expertise">
+  <div class="section-header">
+    <div class="section-label">Expertise</div>
+    <h2 class="section-title">What I Do</h2>
+  </div>
+
+  <div class="expertise-grid">
+    <div class="expertise-card">
+      <div class="expertise-icon">📋</div>
+      <h4>Content Strategy</h4>
+      <p>Audience-first planning, editorial calendars, content frameworks, and multi-channel distribution strategies that drive sustainable growth.</p>
+    </div>
+    <div class="expertise-card">
+      <div class="expertise-icon">✍️</div>
+      <h4>Copywriting</h4>
+      <p>Conversion-focused copy for social media, articles, email campaigns, and brand messaging. SEO-optimized and audience-driven.</p>
+    </div>
+    <div class="expertise-card">
+      <div class="expertise-icon">📈</div>
+      <h4>Analytics & Growth</h4>
+      <p>Data-driven decision making, performance metrics, engagement optimization, and growth hacking through content.</p>
+    </div>
+    <div class="expertise-card">
+      <div class="expertise-icon">🎤</div>
+      <h4>Brand Voice</h4>
+      <p>Building and maintaining consistent brand voice across platforms. Legal content simplified for general audiences.</p>
+    </div>
+    <div class="expertise-card">
+      <div class="expertise-icon">🎬</div>
+      <h4>Multimedia Content</h4>
+      <p>Scripts, captions, video briefs, and multimedia storytelling. Content that performs on every platform.</p>
+    </div>
+    <div class="expertise-card">
+      <div class="expertise-icon">🚀</div>
+      <h4>Campaign Execution</h4>
+      <p>End-to-end campaign management, deadline-driven delivery, and cross-functional collaboration with agencies and stakeholders.</p>
+    </div>
+  </div>
+
+  <div style="margin-top: 60px; padding-top: 60px; border-top: 1px solid var(--border);">
+    <div class="section-header">
+      <div class="section-label">Toolkit</div>
+      <h3 class="section-title">Tools & Platforms</h3>
+    </div>
+
+    <div class="tools-grid">
+      <div class="tool-category">
+        <h4>Content & Writing</h4>
+        <div class="tool-tags">
+          <span class="tag">Copywriting</span>
+          <span class="tag">Content Strategy</span>
+          <span class="tag">SEO Content</span>
+          <span class="tag">Social Media</span>
+          <span class="tag">Email Campaigns</span>
+          <span class="tag">Video Scripts</span>
+        </div>
+      </div>
+      <div class="tool-category">
+        <h4>Platforms & Tools</h4>
+        <div class="tool-tags">
+          <span class="tag">YouTube</span>
+          <span class="tag">Instagram</span>
+          <span class="tag">LinkedIn</span>
+          <span class="tag">Google Analytics</span>
+          <span class="tag">Canva</span>
+          <span class="tag">CapCut</span>
+        </div>
+      </div>
+      <div class="tool-category">
+        <h4>Marketing & Analytics</h4>
+        <div class="tool-tags">
+          <span class="tag">Growth Hacking</span>
+          <span class="tag">Performance Analytics</span>
+          <span class="tag">A/B Testing</span>
+          <span class="tag">Engagement Metrics</span>
+          <span class="tag">Campaign Management</span>
+          <span class="tag">Audience Research</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
 <!-- WORK SECTION -->
 <section class="section" id="work">
   <div class="section-header">
@@ -240,8 +343,7 @@ footer { text-align: center; padding: 32px 60px; font-size: 12px; color: var(--m
     <h2 class="section-title">Desi Kaanoon + YouTube</h2>
   </div>
 
-  <!-- DESI KAANOON + REEL SHOWCASE -->
-  <div class="project-showcase">
+  <div class="project-grid">
     <!-- LEFT: DESI KAANOON -->
     <div class="dk-showcase">
       <div class="dk-image-container">
@@ -259,8 +361,8 @@ footer { text-align: center; padding: 32px 60px; font-size: 12px; color: var(--m
       </div>
     </div>
 
-    <!-- RIGHT: REEL + TEXT -->
-    <div class="yt-right">
+    <!-- RIGHT: REEL + YOUTUBE -->
+    <div>
       <div class="reel-container">
         <div class="reel-title">Featured Reel</div>
         <div class="reel-grid">
@@ -276,7 +378,7 @@ footer { text-align: center; padding: 32px 60px; font-size: 12px; color: var(--m
         </div>
       </div>
 
-      <div class="yt-metrics">
+      <div class="yt-metrics" style="margin-top: 24px;">
         <h4>My YouTube Channel</h4>
         <div class="metric-grid">
           <div class="metric-item">
@@ -296,7 +398,7 @@ footer { text-align: center; padding: 32px 60px; font-size: 12px; color: var(--m
   </div>
 
   <!-- YOUTUBE PROJECT -->
-  <div class="yt-project" id="yt-project">
+  <div class="yt-project">
     <h3 class="yt-project-title">YouTube — Thumbnail Design & Strategy</h3>
     <p class="yt-project-desc">2+ years building audience-first video content. Every thumbnail designed, scripted, and optimized for CTR. Zero paid promotion — all organic growth.</p>
     
@@ -321,13 +423,6 @@ footer { text-align: center; padding: 32px 60px; font-size: 12px; color: var(--m
         </div>
         <div class="thumb-title">Asli Sachh</div>
       </a>
-
-      <a href="https://raw.githubusercontent.com/devendraagarwalll/devendra-agarwal/main/Video.webp" target="_blank" class="thumb-card">
-        <div class="thumb-image">
-          <img src="https://raw.githubusercontent.com/devendraagarwalll/devendra-agarwal/main/Video.webp" alt="Video Content">
-        </div>
-        <div class="thumb-title">Video Content</div>
-      </a>
     </div>
   </div>
 </section>
@@ -337,30 +432,32 @@ footer { text-align: center; padding: 32px 60px; font-size: 12px; color: var(--m
 <!-- ACHIEVEMENTS SECTION -->
 <section class="section achievements-section" id="achievements">
   <div class="section-header">
-    <div class="section-label">Achievements</div>
-    <h2 class="section-title">Recognitions & Certifications</h2>
+    <div class="section-label">Recognition & Credentials</div>
+    <h2 class="section-title">Achievements</h2>
   </div>
 
   <div class="achieve-grid">
-    <!-- LOR - FIRST -->
+    <!-- LOR -->
     <a href="https://raw.githubusercontent.com/devendraagarwalll/devendra-agarwal/main/LOR.png" target="_blank" class="achieve-card">
       <div class="achieve-image">
         <img src="https://raw.githubusercontent.com/devendraagarwalll/devendra-agarwal/main/LOR.png" alt="Letter of Recommendation">
+        <div class="achieve-overlay"></div>
       </div>
       <div class="achieve-content">
-        <div class="achieve-badge">Reference</div>
         <div class="achieve-name">Letter of Recommendation</div>
+        <div class="achieve-label">Reference</div>
       </div>
     </a>
 
-    <!-- IIML MBA -->
+    <!-- IIML -->
     <a href="https://raw.githubusercontent.com/devendraagarwalll/devendra-agarwal/main/IIML.jpeg" target="_blank" class="achieve-card">
       <div class="achieve-image">
         <img src="https://raw.githubusercontent.com/devendraagarwalll/devendra-agarwal/main/IIML.jpeg" alt="IIML MBA">
+        <div class="achieve-overlay"></div>
       </div>
       <div class="achieve-content">
-        <div class="achieve-badge">Degree</div>
         <div class="achieve-name">IIML MBA</div>
+        <div class="achieve-label">Bangalore</div>
       </div>
     </a>
 
@@ -368,32 +465,23 @@ footer { text-align: center; padding: 32px 60px; font-size: 12px; color: var(--m
     <a href="https://raw.githubusercontent.com/devendraagarwalll/devendra-agarwal/main/IIT.jpeg" target="_blank" class="achieve-card">
       <div class="achieve-image">
         <img src="https://raw.githubusercontent.com/devendraagarwalll/devendra-agarwal/main/IIT.jpeg" alt="IIT">
+        <div class="achieve-overlay"></div>
       </div>
       <div class="achieve-content">
-        <div class="achieve-badge">Education</div>
-        <div class="achieve-name">IIT</div>
+        <div class="achieve-name">Top 8 of 483</div>
+        <div class="achieve-label">Competition</div>
       </div>
     </a>
 
-    <!-- QCI -->
+    <!-- QCI / Other -->
     <a href="https://raw.githubusercontent.com/devendraagarwalll/devendra-agarwal/main/QCI.jpeg" target="_blank" class="achieve-card">
       <div class="achieve-image">
         <img src="https://raw.githubusercontent.com/devendraagarwalll/devendra-agarwal/main/QCI.jpeg" alt="QCI Certification">
+        <div class="achieve-overlay"></div>
       </div>
       <div class="achieve-content">
-        <div class="achieve-badge">Certified</div>
-        <div class="achieve-name">QCI</div>
-      </div>
-    </a>
-
-    <!-- Zonal Head -->
-    <a href="https://raw.githubusercontent.com/devendraagarwalll/devendra-agarwal/main/Zonal%20Head.png" target="_blank" class="achieve-card">
-      <div class="achieve-image">
-        <img src="https://raw.githubusercontent.com/devendraagarwalll/devendra-agarwal/main/Zonal%20Head.png" alt="Zonal Head">
-      </div>
-      <div class="achieve-content">
-        <div class="achieve-badge">Role</div>
-        <div class="achieve-name">Zonal Head</div>
+        <div class="achieve-name">1st Place</div>
+        <div class="achieve-label">Certification</div>
       </div>
     </a>
   </div>
