@@ -128,17 +128,25 @@ nav { position: sticky; top: 0; background: rgba(255,255,255,0.98); backdrop-fil
 .achieve-name { font-family: 'Space Grotesk', sans-serif; font-size: 13px; font-weight: 700; color: var(--dark); }
 .achieve-label { font-size: 11px; color: var(--muted); margin-top: 6px; }
 
-.contact-section { border-top: 1px solid var(--border); padding: 72px 60px; max-width: 1100px; margin: 0 auto; }
-.contact-heading { font-family: 'Space Grotesk', sans-serif; font-size: clamp(28px, 3.5vw, 42px); font-weight: 800; letter-spacing: -1px; line-height: 1.3; color: var(--dark); margin-bottom: 32px; }
-.contact-heading .accent { color: var(--accent); }
-.contact-links { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
-.contact-link { font-size: 15px; color: var(--mid); text-decoration: none; display: flex; align-items: center; gap: 12px; font-weight: 500; padding: 12px 0; transition: color 0.2s; }
-.contact-link:hover { color: var(--accent); }
+/* CTA SECTION - HERO STYLE */
+.cta-section { padding: 120px 60px; background: linear-gradient(135deg, #FFFFFF 0%, #F9F4F1 100%); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.cta-container { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.cta-text h2 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(36px, 5vw, 56px); font-weight: 800; letter-spacing: -1px; line-height: 1.15; color: var(--dark); margin-bottom: 12px; }
+.cta-text h2 .accent { color: var(--accent); }
+.cta-description { font-size: 14px; color: var(--mid); line-height: 1.8; margin-top: 24px; }
+
+.contact-info { display: flex; flex-direction: column; gap: 24px; }
+.info-item { display: flex; align-items: flex-start; gap: 14px; }
+.info-icon { font-size: 20px; margin-top: 2px; flex-shrink: 0; }
+.info-content { display: flex; flex-direction: column; gap: 4px; }
+.info-label { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.info-value { font-size: 14px; color: var(--dark); font-weight: 500; text-decoration: none; }
+.info-value:hover { color: var(--accent); }
 
 footer { text-align: center; padding: 32px 60px; font-size: 12px; color: var(--muted); border-top: 1px solid var(--border); background: var(--surface); }
 
 @media (max-width: 768px) {
-  nav, .hero, .section, .contact-section { padding-left: 20px; padding-right: 20px; }
+  nav, .hero, .section { padding-left: 20px; padding-right: 20px; }
   nav { padding: 12px 20px; }
   .nav-menu { gap: 16px; }
   .stats-container { grid-template-columns: repeat(2, 1fr); }
@@ -149,7 +157,7 @@ footer { text-align: center; padding: 32px 60px; font-size: 12px; color: var(--m
   .reel-grid { grid-template-columns: 1fr; }
   .thumbnail-grid { grid-template-columns: repeat(2, 1fr); }
   .achieve-grid { grid-template-columns: repeat(2, 1fr); }
-  .contact-links { grid-template-columns: 1fr; }
+  .cta-container { grid-template-columns: 1fr; gap: 40px; padding: 60px 20px; }
 }
 
 @media (max-width: 480px) {
@@ -159,6 +167,7 @@ footer { text-align: center; padding: 32px 60px; font-size: 12px; color: var(--m
   .thumbnail-grid { grid-template-columns: 1fr; }
   .achieve-grid { grid-template-columns: 1fr; }
   .expertise-grid { grid-template-columns: 1fr; }
+  .cta-text h2 { font-size: 28px; }
 }
 </style>
 </head>
@@ -468,20 +477,49 @@ footer { text-align: center; padding: 32px 60px; font-size: 12px; color: var(--m
 
 <hr class="section-divider">
 
-<!-- CONTACT SECTION -->
-<section class="contact-section" id="contact">
-  <h2 class="contact-heading">Let's <span class="accent">Connect</span></h2>
-  <div class="contact-links">
-    <a href="mailto:devendra.agarwal2002@gmail.com" class="contact-link">✉ Email Me</a>
-    <a href="https://www.instagram.com/desikaanoon/" target="_blank" class="contact-link">📸 Desi Kaanoon</a>
-    <a href="https://www.youtube.com/@desikaanoon/" target="_blank" class="contact-link">🎬 YouTube Channel</a>
-    <a href="https://github.com/devendraagarwalll" target="_blank" class="contact-link">💻 GitHub</a>
+<!-- CTA SECTION -->
+<section class="cta-section" id="contact">
+  <div class="cta-container">
+    <div class="cta-text">
+      <h2>Let's <span class="accent">create</span> something<br>impactful.</h2>
+      <p class="cta-description">I'm ready to help you build audience-first content that drives real engagement and measurable growth. Let's work together.</p>
+    </div>
+    <div class="contact-info">
+      <div class="info-item">
+        <div class="info-icon">✉</div>
+        <div class="info-content">
+          <div class="info-label">Email</div>
+          <a href="mailto:devendra.agarwal2002@gmail.com" class="info-value">devendra.agarwal2002@gmail.com</a>
+        </div>
+      </div>
+      <div class="info-item">
+        <div class="info-icon">📱</div>
+        <div class="info-content">
+          <div class="info-label">Phone</div>
+          <a href="tel:+919473738606" class="info-value">+91-9473738606</a>
+        </div>
+      </div>
+      <div class="info-item">
+        <div class="info-icon">💼</div>
+        <div class="info-content">
+          <div class="info-label">LinkedIn</div>
+          <a href="https://linkedin.com/in/devendra-agarwal" target="_blank" class="info-value">linkedin.com/in/devendra-agarwal</a>
+        </div>
+      </div>
+      <div class="info-item">
+        <div class="info-icon">📸</div>
+        <div class="info-content">
+          <div class="info-label">Instagram</div>
+          <a href="https://www.instagram.com/desikaanoon/" target="_blank" class="info-value">@desikaanoon (100K)</a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <p>Designed & built by Devendra Agarwal. All content © 2024. Crafted with precision.</p>
+  <p>© 2025 Devendra Agarwal | Content Strategist & Copywriter. All work is live and linked above.</p>
 </footer>
 
 </body>
